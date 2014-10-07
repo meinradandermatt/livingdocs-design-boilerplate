@@ -1,0 +1,6 @@
+{
+  "namespace": "boilerplate",
+  "paragraph": "p",
+  "version": 1,
+  "css": ["/stylesheets/all.css"]
+}
