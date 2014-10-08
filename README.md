@@ -8,12 +8,9 @@ It defines a setup for easily creating and testing a design.
 
   1. Install node.js and npm (http://nodejs.org/)
   2. Install grunt using `npm install -g grunt-cli`
-  3. [Create a Github access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) for installing private repos.
-  4. From the root of the project run `npm install`
-  5. Use your newly created token to login to Github (no password required). The login will be stored in your OSX keychain.
-  6. Add `osxkeychain` to your Git config: `git config --global credential.helper osxkeychain`
-  7. Install Compass and Susy by typing `bundle install`
-  8. Run `grunt dev` to compile the design. When a file changes, the files in **/dist** are updated automatically
+  3. From the root of the project run `npm install`
+  4. Install Compass and Susy by typing `bundle install`
+  5. Run `grunt dev` to compile the design. When a file changes, the files in **/dist** are updated automatically
 
 
 ##Design
