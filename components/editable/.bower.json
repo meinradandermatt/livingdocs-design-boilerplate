@@ -1,0 +1,29 @@
+{
+  "name": "editable",
+  "version": "0.4.1",
+  "homepage": "https://github.com/upfrontIO/editable.js",
+  "authors": [
+    "Matteo Agosti<matteo@upfront.io>",
+    "Lukas Peyer<lukas@upfront.io>"
+  ],
+  "keywords": [
+    "contenteditable",
+    "editable"
+  ],
+  "description": "Friendly contenteditable API",
+  "license": "MIT",
+  "ignore": [
+    "**/**",
+    "!editable.js",
+    "!editable.min.js"
+  ],
+  "_release": "0.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.4.1",
+    "commit": "447197fe6f9cc9ae4732b72ced620266d9619287"
+  },
+  "_source": "git://github.com/upfrontIO/editable.js.git",
+  "_target": "~0.4.0",
+  "_originalSource": "editable"
+}
