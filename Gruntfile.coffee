@@ -125,6 +125,13 @@ grunt.initConfig
     preBuild: ['.tmp/', 'dist/']
     postBuild: ['.tmp/']
 
+
+  mkdir:
+    all:
+      options:
+        create: ['.tmp/source']
+
+
   express:
     dev:
       options:
@@ -149,6 +156,7 @@ grunt.registerTask "postCompile", [
 
 grunt.registerTask "default", [
   "clean:preBuild"
+  "mkdir"
   "lddesigns:development"
   "postCompile"
 ]
