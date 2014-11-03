@@ -1,35 +1,33 @@
 {
-  "design": {
-    "name": "boilerplate",
-    "version": "0.0.1",
-    "author": "Peter Pan"
-  },
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "author": "Peter Pan",
   "assets": {
     "css": ["/stylesheets/boilerplate.css"]
   },
   "componentProperties": {
     "featured": {
-      "name": "Featured",
+      "label": "Featured",
       "type": "option",
       "value": "bleed"
     },
     "unordered": {
-      "name": "Unordered",
+      "label": "Unordered",
       "type": "option",
       "value": "bullet"
     },
     "dropcap": {
-      "name": "Drop Capital",
+      "label": "Drop Capital",
       "type": "option",
       "value": "drop-cap"
     },
     "large": {
-      "name": "Large",
+      "label": "Large",
       "type": "option",
       "value": "large"
     },
     "position": {
-      "name": "Position",
+      "label": "Position",
       "type": "select",
       "options": [
         {
@@ -47,7 +45,7 @@
       ]
     },
     "aspect-ratio": {
-      "name": "Aspect Ratio",
+      "label": "Aspect Ratio",
       "type": "select",
       "options": [
         {
@@ -61,12 +59,12 @@
       ]
     },
     "inside-caption": {
-      "name": "Inside Caption",
+      "label": "Inside Caption",
       "type": "option",
       "value": "caption-inside-fade"
     },
     "peephole": {
-      "name": "Size",
+      "label": "Size",
       "type": "select",
       "options": [
         {
@@ -80,17 +78,17 @@
       ]
     },
     "fixed-background": {
-      "name": "Fixed Background",
+      "label": "Fixed Background",
       "type": "option",
       "value": "peephole"
     }
   },
   "groups": [
     {
-      "name": "Headers",
+      "label": "Headers",
       "components": ["title"]
     }, {
-      "name": "Text",
+      "label": "Text",
       "components": ["p"]
     }
   ],
