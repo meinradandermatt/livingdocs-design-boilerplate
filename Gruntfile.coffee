@@ -44,13 +44,6 @@ grunt.initConfig
   lddesign:
     development:
       options:
-        # templates do not work unminified. Is there a bug in livingdocs-engine?
-        minify: false
-        minifyOptions:
-          collapseWhitespace: true
-          removeComments: true
-          removeCommentsFromCDATA: true
-          removeCDATASectionsFromCDATA: true
         templatesDirectory: 'components'
         configurationElement: 'script[type=ld-conf]'
       files: [
@@ -61,9 +54,7 @@ grunt.initConfig
       ]
     build:
       options:
-        # templates do not work unminified. Is there a bug in livingdocs-engine?
-        minify: true
-        minifyOptions:
+        minify:
           collapseWhitespace: true
           removeComments: true
           removeCommentsFromCDATA: true
