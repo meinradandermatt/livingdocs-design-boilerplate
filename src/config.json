@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Peter Pan",
   "assets": {
-    "css": ["/stylesheets/boilerplate.css"]
+    "css": ["./stylesheets/boilerplate.css"]
   },
   "componentProperties": {
     "featured": {
@@ -31,6 +31,9 @@
       "type": "select",
       "options": [
         {
+          "caption": "Default"
+        },
+        {
           "caption": "Left",
           "value": "left"
         },
@@ -48,6 +51,9 @@
       "label": "Aspect Ratio",
       "type": "select",
       "options": [
+        {
+          "caption": "Default"
+        },
         {
           "caption": "Cinemascope",
           "value": "cinemascope"
@@ -67,6 +73,9 @@
       "label": "Size",
       "type": "select",
       "options": [
+        {
+          "caption": "Default"
+        },
         {
           "caption": "Small",
           "value": "small"
