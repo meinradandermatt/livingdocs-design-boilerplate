@@ -11,22 +11,24 @@ grunt.initConfig
         compile: true
       files: [
         expand: true
-        cwd: './'
-        src:['source/stylesheets/*']
+        cwd: './src'
+        src:['stylesheets/*.less']
         dest: '.tmp/'
         ext: '.css'
         filter: (src) ->
-          return src.split('/').pop()[0] != '_' && (src.indexOf('.css') != -1 || src.indexOf('.less') != -1)
+          return src.split('/').pop()[0] != '_'
       ]
 
   sass:
     dist:
       files: [
         expand: true
-        cwd: './'
-        src:['source/stylesheets/*.scss']
+        cwd: './src'
+        src:['stylesheets/*.scss']
         dest: '.tmp/'
         ext: '.css'
+        filter: (src) ->
+          return src.split('/').pop()[0] != '_'
       ]
 
   stylus:
@@ -36,9 +38,11 @@ grunt.initConfig
       files: [
         expand: true
         cwd: './'
-        src: [ 'source/stylesheets/*.styl' ]
+        src: [ 'src/stylesheets/*.styl' ]
         dest: '.tmp/'
         ext: '.css'
+        filter: (src) ->
+          return src.split('/').pop()[0] != '_'
       ]
 
   lddesign:
@@ -48,8 +52,8 @@ grunt.initConfig
         configurationElement: 'script[type=ld-conf]'
       files: [
         expand: true
-        cwd: './'
-        src: ['source']
+        cwd: './src'
+        src: ['./']
         dest: '.tmp/'
       ]
     build:
@@ -63,8 +67,8 @@ grunt.initConfig
         configurationElement: 'script[type=ld-conf]'
       files: [
         expand: true
-        cwd: './'
-        src: ['source']
+        cwd: './src'
+        src: ['./']
         dest: '.tmp/'
       ]
 
@@ -72,10 +76,10 @@ grunt.initConfig
     assets:
       files: [
         expand: true
-        cwd: './'
+        cwd: './src'
         src:[
-          'source/images/**'
-          'source/index.html'
+          './images/**'
+          './index.html'
         ]
         dest: '.tmp/'
         # exclude empty directories
@@ -85,7 +89,7 @@ grunt.initConfig
     tmpToDist:
       files: [
         expand: true
-        cwd: '.tmp/source/'
+        cwd: '.tmp/'
         src: ['**/*']
         dest: 'dist/'
       ]
@@ -100,14 +104,14 @@ grunt.initConfig
     stylesheets:
       files: [
         expand: true
-        cwd: './'
-        src:['source/stylesheets/**/*.css']
+        cwd: './src'
+        src:['stylesheets/**/*.css']
         dest: '.tmp/'
       ]
 
   watch:
     scripts:
-      files: ['source/**/*']
+      files: ['src/**/*']
       tasks: ['default']
       options:
         nospawn: true
@@ -116,12 +120,6 @@ grunt.initConfig
   clean:
     preBuild: ['.tmp/', 'dist/']
     postBuild: ['.tmp/']
-
-
-  mkdir:
-    all:
-      options:
-        create: ['.tmp/source']
 
 
   express:
