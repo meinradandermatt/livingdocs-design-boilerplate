@@ -146,18 +146,13 @@ grunt.registerTask "postCompile", [
   "clean:postBuild"
 ]
 
-grunt.registerTask "default", [
+
+grunt.registerTask "build", [
   "clean:preBuild"
-  "mkdir"
   "lddesign:development"
   "postCompile"
 ]
 
-grunt.registerTask "build", [
-  "clean:preBuild"
-  "lddesigns:build"
-  "postCompile"
-]
 
 grunt.registerTask "serve", [
   "default"
@@ -165,5 +160,7 @@ grunt.registerTask "serve", [
   "watch"
 ]
 
+
+grunt.registerTask "default", ["build"]
 grunt.registerTask "dev", ["serve"]
 
