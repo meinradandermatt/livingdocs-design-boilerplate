@@ -2,7 +2,7 @@
   "name": "livingdocs-design-boilerplate",
   "version": "0.0.1",
   "dependencies": {
-    "livingdocs-engine": "git@github.com:upfrontIO/livingdocs-engine.git#~0.3.0",
+    "livingdocs-engine": "git@github.com:upfrontIO/livingdocs-engine.git#~0.4.2",
     "editable": "git@github.com:upfrontIO/editable.js.git#~0.4.1",
     "jquery": "~2.1.1"
   }

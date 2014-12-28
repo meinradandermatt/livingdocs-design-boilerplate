@@ -1,6 +1,6 @@
 {
   "name": "livingdocs-engine",
-  "version": "0.3.0",
+  "version": "0.4.2",
   "homepage": "https://github.com/upfrontIO/livingdocs-engine",
   "description": "Livingdocs Engine",
   "private": true,
@@ -10,16 +10,15 @@
     "!dist/**/**"
   ],
   "dependencies": {
-    "editable": "~0.4.0",
-    "jquery": "~2.1.0"
+    "editable": "~0.4.2"
   },
-  "_release": "0.3.0",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "v0.3.0",
-    "commit": "2ea15a69288e6d4bb2e0d779edc50773af9488e0"
+    "tag": "v0.4.2",
+    "commit": "b39d98d0226bbe1cd48a8d594cf328877456aa35"
   },
   "_source": "git@github.com:upfrontIO/livingdocs-engine.git",
-  "_target": "~0.3.0",
+  "_target": "~0.4.2",
   "_originalSource": "git@github.com:upfrontIO/livingdocs-engine.git"
 }
