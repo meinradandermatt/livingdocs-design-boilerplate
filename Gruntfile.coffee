@@ -108,6 +108,13 @@ grunt.initConfig
         dest: '../livingdocs-editor/app/designs/dist/'
       ]
 
+  autoprefixer:
+    styles:
+      expand: true
+      flatten: true
+      src: '.tmp/stylesheets/*.css'
+      dest: '.tmp/stylesheets/'
+
   watch:
     scripts:
       files: ['src/**/*']
@@ -139,6 +146,7 @@ grunt.registerTask "postCompile", [
   "stylus"
   "copy:assets"
   "copy:stylesheets"
+  "autoprefixer"
   "copy:tmpToDist"
   "clean:postBuild"
 ]
