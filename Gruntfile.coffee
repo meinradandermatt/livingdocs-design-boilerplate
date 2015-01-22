@@ -93,20 +93,19 @@ grunt.initConfig
         src: ['**/*']
         dest: 'dist/'
       ]
-
-    dist:
-      files: [
-        expand: true
-        cwd: 'dist/'
-        src: ['**']
-        dest: '../livingdocs-editor/app/designs/dist/'
-      ]
     stylesheets:
       files: [
         expand: true
         cwd: './src'
         src:['stylesheets/**/*.css']
         dest: '.tmp/'
+      ]
+    editor:
+      files: [
+        expand: true
+        cwd: 'dist/'
+        src: ['**']
+        dest: '../livingdocs-editor/app/designs/dist/'
       ]
 
   watch:
