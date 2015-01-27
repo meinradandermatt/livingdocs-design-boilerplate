@@ -24,8 +24,9 @@ Basic Information:
 
 ```json
 "name": "boilerplate",
-"version": "0.0.1",
-"author": "Peter Pan",
+"label": "Boilerplate Design",
+"version": "1.0.0",
+"author": "upfront.io"
 ```
 
 
@@ -44,7 +45,7 @@ Define the stylesheets that are needed by your design in the `config.json` so th
 
 ## Components
 
-Inside of the folder `src/components` you can define HTML components that can be used in documents that use your design.
+Inside of the folder `src/components` you can define HTML components that can be used in documents that use your design. These components will be automatically inserted into `dist/design.json` when you run `grunt build`.
 
 For every component you can create a new file. Here is an example for a paragraph:
 
@@ -61,6 +62,89 @@ For every component you can create a new file. Here is an example for a paragrap
 ```
 
 Inside of the `<script type="ld-conf">` you can define configurations for the components. The component itself is built with normal HTML and Livindocs specific attributes indicate to Livingdocs what content the user can change and edit. The attribute `doc-editable` will turn the paragraph into an editable element.
+
+
+## Default Components
+
+The `defaultComponents` configuration tells the editor which components should be used by default for some basic interactions like Pressing Enter at the end of a paragraph. Since Livingdocs is completely configurable you can for example define what your standard text paragraph looks like.
+
+```json
+"defaultComponents": {
+  "paragraph": "p", // The default component to insert when pressing Enter
+  "image": "image"  // The component to insert when dragging an image into the document.
+}
+```
+
+
+## Component Properties
+
+The settings in `componentProperties` will add configuration options to your components. Technically a componentProperty will just add a css class to the top level element of a component if it is selected by the user. You can use these properties in one of your components as shown further below.
+
+```json
+"componentProperties": {
+
+  // Dropcap that will add the css class 'drop-cap' to a component if selected
+  "dropcap": {
+    "label": "Drop Capital",
+    "type": "option",
+    "value": "drop-cap"
+  },
+
+  // Position property that lets the user choose to add either the css class 'position-left' or 'position-right' to a component.
+  "position": {
+    "label": "Position",
+    "type": "select",
+    "options": [
+      {
+        "caption": "Default"
+      },
+      {
+        "caption": "Left",
+        "value": "position-left"
+      },
+      {
+        "caption": "Right",
+        "value": "position-right"
+      }
+    ]
+  },
+}
+```
+
+This is an example configuration of a paragraph component that uses the `dropcap` componentProperty so the user can check a checkbox in the user interface if they want to have a dropcap at the beginning of their paragraph.
+
+```html
+<script type="ld-conf">
+{
+  "label": "Paragraph",
+  "properties": ["dropcap"]
+}
+</script>
+
+<p doc-editable="text">
+  Lorem Ipsum...
+</p>
+```
+
+
+## Groups
+
+For the User interface you can group your components. This is done via the `groups` configuration. These are purely instructions for the user interface how to display a grouped list of components to the user.
+
+```json
+"groups": [
+  {
+    "label": "Headers",
+    "components": ["hero", "head", "title"]
+  }, {
+    "label": "Text",
+    "components": ["subtitle", "p", "quote", "aside"]
+  }, {
+    "label": "Images",
+    "components": ["image", "peephole"]
+  }
+],
+```
 
 
 ## How to export your design
