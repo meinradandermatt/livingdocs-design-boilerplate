@@ -1,7 +1,8 @@
 {
   "name": "boilerplate",
-  "version": "0.0.1",
-  "author": "Peter Pan",
+  "label": "Boilerplate",
+  "version": "1.0.0",
+  "author": "upfront.io",
   "assets": {
     "css": ["./stylesheets/boilerplate.css"]
   },
