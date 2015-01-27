@@ -106,6 +106,7 @@
     }
   ],
   "defaultComponents": {
-    "paragraph": "p"
+    "paragraph": "p",
+    "image": "image"
   }
 }
