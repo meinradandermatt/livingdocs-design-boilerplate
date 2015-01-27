@@ -96,10 +96,13 @@
   "groups": [
     {
       "label": "Headers",
-      "components": ["title"]
+      "components": ["hero", "head", "title"]
     }, {
       "label": "Text",
-      "components": ["p"]
+      "components": ["subtitle", "p", "quote", "aside"]
+    }, {
+      "label": "Images",
+      "components": ["image", "peephole"]
     }
   ],
   "defaultComponents": {
