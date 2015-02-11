@@ -1,13 +1,14 @@
 (function () { var designJSON = {
   "name": "boilerplate",
   "label": "Boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "author": "upfront.io",
   "assets": {
     "css": [
       "./stylesheets/boilerplate.css"
     ]
   },
+  "wrapper": "<div class='doc-section'></div>",
   "componentProperties": {
     "featured": {
       "label": "Featured",
@@ -125,6 +126,40 @@
     "paragraph": "p",
     "image": "image"
   },
+  "defaultContent": [
+    {
+      "component": "head"
+    },
+    {
+      "component": "p"
+    },
+    {
+      "component": "image",
+      "styles": {
+        "position": "left",
+        "aspect-ratio": "square"
+      }
+    }
+  ],
+  "prefilledComponents": {},
+  "metadata": [
+    {
+      "identifier": "title",
+      "type": "text",
+      "matches": [
+        "hero.title",
+        "title.title",
+        "head.title"
+      ]
+    },
+    {
+      "identifier": "description",
+      "type": "text",
+      "matches": [
+        "p.text"
+      ]
+    }
+  ],
   "components": [
     {
       "name": "head",
