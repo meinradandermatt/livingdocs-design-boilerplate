@@ -156,6 +156,12 @@ The design is compiled using `grunt build` and previewed using `grunt dev`. The 
     dist/images/          // images are copied
     dist/stylesheets/     // stylesheets are to css and then copied
 
+You can manage your design versions with the `grunt release task`:
+
+    grunt release:patch
+    grunt release:minor
+    grunt release:major
+
 
 ## Installation
 
