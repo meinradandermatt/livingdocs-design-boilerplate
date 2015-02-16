@@ -127,6 +127,44 @@ This is an example configuration of a paragraph component that uses the `dropcap
 ```
 
 
+## Image Aspect Ratios
+
+Named aspect ratios can be added to a design that can be reused in the components. It is possible to restrict images to certain aspect ratios to for example ensure that an image is alwas a landscape image of 16:9.
+
+```json
+"imageRatios": {
+  "16:9": {
+    "label": "16:9",
+    "ratio": "16x9"
+  },
+  "1:1": {
+    "label": "1:1",
+    "ratio": "1x1"
+  }
+}
+```
+
+In a component the aspect ratios can be defined per image directive. In the following example the user can crop the image freely and the aspect ratios 16:9 and 1:1 are available in the UI to conveniently crop to these ratios.
+
+```html
+<script type="ld-conf">
+{
+  "label": "Image",
+  "directives": {
+    "image": {
+      "imageRatios": ["16:9", "1:1"],
+      "allowOriginalRatio": true
+    }
+  }
+}
+</script>
+
+<figure class="figure">
+    <img doc-image="image" />
+</figure>
+```
+
+
 ## Groups
 
 For the User interface you can group your components. This is done via the `groups` configuration. These are purely instructions for the user interface how to display a grouped list of components to the user.
