@@ -12,7 +12,7 @@ grunt.initConfig
       files: [
         expand: true
         cwd: './src'
-        src:['stylesheets/*.less']
+        src:['css/*.less']
         dest: '.tmp/'
         ext: '.css'
         filter: (src) ->
@@ -24,7 +24,7 @@ grunt.initConfig
       files: [
         expand: true
         cwd: './src'
-        src:['stylesheets/*.scss']
+        src:['css/*.scss']
         dest: '.tmp/'
         ext: '.css'
         filter: (src) ->
@@ -38,7 +38,7 @@ grunt.initConfig
       files: [
         expand: true
         cwd: './'
-        src: [ 'src/stylesheets/*.styl' ]
+        src: [ 'src/css/*.styl' ]
         dest: '.tmp/'
         ext: '.css'
         filter: (src) ->
@@ -93,11 +93,11 @@ grunt.initConfig
         src: ['**/*']
         dest: 'dist/'
       ]
-    stylesheets:
+    css:
       files: [
         expand: true
         cwd: './src'
-        src:['stylesheets/**/*.css']
+        src:['css/**/*.css']
         dest: '.tmp/'
       ]
     editor:
@@ -112,8 +112,8 @@ grunt.initConfig
     styles:
       expand: true
       flatten: true
-      src: '.tmp/stylesheets/*.css'
-      dest: '.tmp/stylesheets/'
+      src: '.tmp/css/*.css'
+      dest: '.tmp/css/'
 
   watch:
     scripts:
@@ -151,7 +151,7 @@ grunt.registerTask "postCompile", [
   "sass"
   "stylus"
   "copy:assets"
-  "copy:stylesheets"
+  "copy:css"
   "autoprefixer"
   "copy:tmpToDist"
   "clean:postBuild"
