@@ -1,7 +1,7 @@
 {
   "name": "boilerplate",
   "label": "Boilerplate",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "author": "upfront.io",
   "assets": {
     "css": [
@@ -138,17 +138,17 @@
       ]
     },
     {
-      "name": "media",
-      "html": "<div class=\"embed-responsive embed-responsive-16by9\" doc-html=\"iframe\"></div>",
-      "label": "Media"
-    },
-    {
       "name": "well",
       "html": "<div class=\"well\">\n  Look, I&apos;m in a well!\n</div>",
       "label": "Well",
       "properties": [
         "well-large"
       ]
+    },
+    {
+      "name": "media",
+      "html": "<div class=\"embed-responsive embed-responsive-16by9\" doc-html=\"iframe\"></div>",
+      "label": "Media"
     },
     {
       "name": "main-and-sidebar",
