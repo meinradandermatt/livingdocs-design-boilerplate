@@ -22,7 +22,7 @@ The config.json defines the design configuration. You can specifiy through the d
 
 Basic Information:
 
-```json
+```javascript
 "name": "boilerplate",
 "label": "Boilerplate Design",
 "version": "1.0.0",
@@ -36,7 +36,7 @@ You can put your stylesheets inside of the `src/stylesheets` folders. How your c
 
 Define the stylesheets that are needed by your design in the `config.json` so that Livingdocs can laod them dynamically into the editor.
 
-```json
+```javascript
 "assets": {
   "css": ["./stylesheets/boilerplate.css"]
 },
@@ -64,11 +64,38 @@ For every component you can create a new file. Here is an example for a paragrap
 Inside of the `<script type="ld-conf">` you can define configurations for the components. The component itself is built with normal HTML and Livindocs specific attributes indicate to Livingdocs what content the user can change and edit. The attribute `doc-editable` will turn the paragraph into an editable element.
 
 
+#### Advanced Example
+
+This is a custom container that can only be placed at the topmost level (not be nested inside other components) and which can only contain `text` and `image` components.
+
+```html
+<script type="ld-conf">
+{
+  "name": "list",
+  "label": "List",
+  "allowedParents": ["root"]
+  "directives": {
+    "children": {
+      "allowedChildren": ["text", "image"]
+    }
+  }
+}
+</script>
+
+<div doc-container="children"></div>
+```
+
+- `name` The name of this component as used in code. If not specified this is inferred from the filename.  
+- `label` The label displayed in user interfaces.  
+- `directives` Configuration for individual directives. Here the container is configured to only accept certain components.  
+- `allowedParents` Inside of which components a component can be placed. ('root' stands for the topmost level.)  
+
+
 ## Default Components
 
 The `defaultComponents` configuration tells the editor which components should be used by default for some basic interactions like Pressing Enter at the end of a paragraph. Since Livingdocs is completely configurable you can for example define what your standard text paragraph looks like.
 
-```json
+```javascript
 "defaultComponents": {
   "paragraph": "p", // The default component to insert when pressing Enter
   "image": "image"  // The component to insert when dragging an image into the document.
@@ -80,7 +107,7 @@ The `defaultComponents` configuration tells the editor which components should b
 
 The settings in `componentProperties` will add configuration options to your components. Technically a componentProperty will just add a css class to the top level element of a component if it is selected by the user. You can use these properties in one of your components as shown further below.
 
-```json
+```javascript
 "componentProperties": {
 
   // Dropcap that will add the css class 'drop-cap' to a component if selected
@@ -131,7 +158,7 @@ This is an example configuration of a paragraph component that uses the `dropcap
 
 Named aspect ratios can be added to a design that can be reused in the components. It is possible to restrict images to certain aspect ratios to for example ensure that an image is alwas a landscape image of 16:9.
 
-```json
+```javascript
 "imageRatios": {
   "16:9": {
     "label": "16:9",
@@ -169,7 +196,7 @@ In a component the aspect ratios can be defined per image directive. In the foll
 
 For the User interface you can group your components. This is done via the `groups` configuration. These are purely instructions for the user interface how to display a grouped list of components to the user.
 
-```json
+```javascript
 "groups": [
   {
     "label": "Headers",
