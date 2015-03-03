@@ -8,7 +8,7 @@
     "css": ["./css/bootstrap.css"]
   },
 
-  "wrapper": "<div class='container'></div>",
+  "wrapper": "<div class='container doc-section'></div>",
 
   "componentProperties": {
     "well-large": {
