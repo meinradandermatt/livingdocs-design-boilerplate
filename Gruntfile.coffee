@@ -136,7 +136,7 @@ grunt.initConfig
 
   bump:
     options:
-      files: ['package.json', 'bower.json', 'source/config.json']
+      files: ['package.json', 'bower.json', 'src/config.json']
       commitFiles: ['-a'], # '-a' for all files
       pushTo: 'origin'
       push: true
