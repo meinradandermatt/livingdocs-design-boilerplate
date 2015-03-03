@@ -8,7 +8,7 @@
       "./css/bootstrap.css"
     ]
   },
-  "wrapper": "<div class='container'></div>",
+  "wrapper": "<div class='container doc-section'></div>",
   "componentProperties": {
     "well-large": {
       "label": "Large",
@@ -138,16 +138,6 @@
       ]
     },
     {
-      "name": "media",
-      "html": "<div class=\"embed-responsive embed-responsive-16by9\" doc-html=\"iframe\"></div>",
-      "label": "Media"
-    },
-    {
-      "name": "main-and-sidebar",
-      "html": "<div class=\"row\">\n  <div class=\"col-md-8\" doc-container=\"main\"></div>\n  <div class=\"col-md-4\" doc-container=\"sidebar\"></div>\n</div>",
-      "label": "Main and Sidebar"
-    },
-    {
       "name": "well",
       "html": "<div class=\"well\">\n  Look, I&apos;m in a well!\n</div>",
       "label": "Well",
@@ -156,9 +146,14 @@
       ]
     },
     {
-      "name": "header",
-      "html": "<div class=\"page-header\">\n  <h1 doc-editable=\"title\">Example page header Subtext for header</h1>\n</div>",
-      "label": "Header"
+      "name": "main-and-sidebar",
+      "html": "<div class=\"row\">\n  <div class=\"col-md-8\" doc-container=\"main\"></div>\n  <div class=\"col-md-4\" doc-container=\"sidebar\"></div>\n</div>",
+      "label": "Main and Sidebar"
+    },
+    {
+      "name": "media",
+      "html": "<div class=\"embed-responsive embed-responsive-16by9\" doc-html=\"iframe\"></div>",
+      "label": "Media"
     },
     {
       "name": "h1",
@@ -166,14 +161,14 @@
       "label": "Title H1"
     },
     {
-      "name": "hero",
-      "html": "<div class=\"jumbotron\">\n  <h1 doc-editable=\"title\">Hello, world!</h1>\n  <p doc-editable=\"text\">\n    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.\n  </p>\n  <p>\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\" doc-editable=\"button\">Learn more</a>\n  </p>\n</div>",
-      "label": "Large Image"
-    },
-    {
       "name": "h2",
       "html": "<h1 class=\"title\" doc-editable=\"title\">\n  Title\n</h1>",
       "label": "Title H2"
+    },
+    {
+      "name": "hero",
+      "html": "<div class=\"jumbotron\">\n  <h1 doc-editable=\"title\">Hello, world!</h1>\n  <p doc-editable=\"text\">\n    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.\n  </p>\n  <p>\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\" doc-editable=\"button\">Learn more</a>\n  </p>\n</div>",
+      "label": "Large Image"
     },
     {
       "name": "list-group",
@@ -182,10 +177,16 @@
       "directives": {
         "list": {
           "onlyAllowComponents": [
-            "list-group-item"
+            "list-group-item",
+            "list-group-box-item"
           ]
         }
       }
+    },
+    {
+      "name": "header",
+      "html": "<div class=\"page-header\">\n  <h1 doc-editable=\"title\">Example page header Subtext for header</h1>\n</div>",
+      "label": "Header"
     },
     {
       "name": "image",

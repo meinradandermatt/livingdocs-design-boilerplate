@@ -107,6 +107,13 @@ grunt.initConfig
         src: ['**']
         dest: '../livingdocs-editor/app/designs/dist/'
       ]
+    engine:
+      files: [
+        expand: true
+        cwd: 'dist/'
+        src: ['**']
+        dest: '../livingdocs-engine/public/designs/boilerplate/'
+      ]
 
   autoprefixer:
     styles:
