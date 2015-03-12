@@ -138,7 +138,7 @@ The settings in `componentProperties` will add configuration options to your com
 }
 ```
 
-This is an example configuration of a paragraph component that uses the `dropcap` componentProperty so the user can check a checkbox in the user interface if they want to have a dropcap at the beginning of their paragraph.
+This is an example configuration of a paragraph component that uses the `dropcap` componentProperty. This will automatically add a checkbox to the user inteface so the user can select if they want to have a dropcap at the beginning of their paragraph.
 
 ```html
 <script type="ld-conf">
@@ -156,7 +156,7 @@ This is an example configuration of a paragraph component that uses the `dropcap
 
 ## Image Aspect Ratios
 
-Named aspect ratios can be added to a design that can be reused in the components. It is possible to restrict images to certain aspect ratios to for example ensure that an image is alwas a landscape image of 16:9.
+Named aspect ratios can be added to a design that can be reused in the components. It is possible to restrict images to certain aspect ratios to for example ensure that an image is always a landscape image of 16:9.
 
 ```javascript
 "imageRatios": {
@@ -211,6 +211,52 @@ For the User interface you can group your components. This is done via the `grou
 ],
 ```
 
+## Metadata
+
+This section allows you to configure the livingdocs metadata extractor for the document's content. For example you might want to extract the content of a title component automatically to a metadata field 'title' in your CMS.
+The configuration allows you for each requested metadata field to define which <component>.<directive> combinations should be used for extraction and in what order.
+There are two types of content that can be extracted: text and images. You can define which one you want in the parameter 'type'.
+
+```javascript
+"metadata": [
+  {
+    "identifier": "title",
+    "type": "text",
+    "components": ["hero.title", "head.title", "title.title"]
+  }, {
+    "identifier": "teaserImage",
+    "type": "image",
+    "components": ["hero.image", "image.image"]
+  }
+]
+```
+
+The example above will take the metadata field 'title' preferably from the directive title in the component hero otherwise from the component head or if none of these are available from the component title.
+
+## Prefilled Components
+
+This configuration option lets you define components that should be prefilled upon document creation. E.g., you might want to prefill the author field of a newly created document to the name of the current user.
+There are two types of prefill modes: 'string' and 'computed'. String will just use the string inside the 'value' field to do the prefilling. Computed expects a respective handler method inside the livingdocs-editor so you can only use this type if you have control over the livingdocs-editor. 
+
+```javascript
+"prefilledComponents": {
+  "header": {
+    "author": {
+      "value": "author",
+      "type": "computed"
+    }
+  },
+  "image": {
+    "caption": {
+      "value": "&nbsp;(all copyright by me)",
+      "type": "string"
+    }
+  }
+}
+```
+
+The example above will generate the content of header.author from the handler method "author" inside the livingdocs-editor and the content of image.caption will always be prefilled with "all copyright by me".
+Prefilling is just an initial value. You can always overwrite the content in the editor.
 
 ## How to export your design
 
