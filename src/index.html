@@ -8,6 +8,7 @@
     <!-- Livingdocs Engine CSS -->
     <link href="/components/livingdocs-engine/dist/css/livingdocs.css" rel="stylesheet" />
 
+
     <!-- Livingdocs Engine Dependencies -->
     <script src="/components/jquery/dist/jquery.js"></script>
     <script src="/components/editable/editable.js"></script>
@@ -31,7 +32,7 @@
       $(document).ready(function() {
 
         // Load the design
-        doc.design.load(design.boilerplate);
+        doc.design.load(design.boilerplate, { basePath: '/' });
 
         // Create the document
         var article = doc.new({
@@ -79,9 +80,11 @@
         });
 
         // Insert the article into the page
-        article.appendTo('.article', {
+        article.createView({
+          host: '.article',
           interactive: true,
-          loadResources: false
+          loadResources: false,
+          iframe: false
         });
       });
 
