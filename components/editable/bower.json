@@ -1,6 +1,6 @@
 {
   "name": "editable",
-  "version": "0.4.2",
+  "version": "0.5.1",
   "homepage": "https://github.com/upfrontIO/editable.js",
   "authors": [
     "Matteo Agosti<matteo@upfront.io>",
@@ -16,5 +16,13 @@
     "**/**",
     "!editable.js",
     "!editable.min.js"
-  ]
+  ],
+  "devDependencies": {
+    "sinon": "http://sinonjs.org/releases/sinon-1.10.3.js",
+    "bowser": "0.7.2",
+    "rangy": "1.2.3"
+  },
+  "dependencies": {
+    "jquery": "1.9.1"
+  }
 }
