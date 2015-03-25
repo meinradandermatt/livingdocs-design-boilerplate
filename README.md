@@ -64,7 +64,7 @@ For every component you can create a new file. Here is an example for a paragrap
 Inside of the `<script type="ld-conf">` you can define configurations for the components. The component itself is built with normal HTML and Livindocs specific attributes indicate to Livingdocs what content the user can change and edit. The attribute `doc-editable` will turn the paragraph into an editable element.
 
 
-#### Advanced Example
+#### Advanced Example of a list
 
 This is a custom container that can only be placed at the topmost level (not be nested inside other components) and which can only contain `text` and `image` components.
 
@@ -90,6 +90,28 @@ This is a custom container that can only be placed at the topmost level (not be 
 - `directives` Configuration for individual directives. Here the container is configured to only accept certain components.  
 - `allowedParents` Inside of which components a component can be placed. ('root' stands for the topmost level.)  
 
+
+#### Preview Component
+
+```html
+<script type="ld-conf">
+{
+  "name": "hero",
+  "label": "Hero Teaser"
+}
+</script>
+
+
+<div class="jumbotron">
+  <h1 doc-editable="title">Hello, world!</h1>
+  <p doc-editable="text">
+    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+  </p>
+  <p>
+    <a doc-link="featured" class="btn btn-primary btn-lg" role="button" doc-editable="button">Learn more</a>
+  </p>
+</div>
+```
 
 ## Default Components
 
