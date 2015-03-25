@@ -69,6 +69,9 @@
     }, {
       "label": "Grid",
       "components": ["main-and-sidebar"]
+    }, {
+      "label": "Teasers",
+      "components": ["teaser"]
     }
   ],
 
