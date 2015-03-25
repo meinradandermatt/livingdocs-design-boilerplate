@@ -94,6 +94,12 @@
       "components": [
         "main-and-sidebar"
       ]
+    },
+    {
+      "label": "Teasers",
+      "components": [
+        "teaser"
+      ]
     }
   ],
   "defaultComponents": {
@@ -130,14 +136,6 @@
   ],
   "components": [
     {
-      "name": "panel",
-      "html": "<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">\n    <h3 class=\"panel-title\" doc-editable=\"title\">Panel Title</h3>\n  </div>\n  <div class=\"panel-body\" doc-editable=\"body\">\n    Panel content\n  </div>\n</div>",
-      "label": "Panel",
-      "properties": [
-        "panel-styles"
-      ]
-    },
-    {
       "name": "well",
       "html": "<div class=\"well\">\n  Look, I&apos;m in a well!\n</div>",
       "label": "Well",
@@ -146,14 +144,22 @@
       ]
     },
     {
-      "name": "media",
-      "html": "<div class=\"embed-responsive embed-responsive-16by9\" doc-html=\"iframe\"></div>",
-      "label": "Media"
-    },
-    {
       "name": "main-and-sidebar",
       "html": "<div class=\"row\">\n  <div class=\"col-md-8\" doc-container=\"main\"></div>\n  <div class=\"col-md-4\" doc-container=\"sidebar\"></div>\n</div>",
       "label": "Main and Sidebar"
+    },
+    {
+      "name": "panel",
+      "html": "<div class=\"panel panel-default\">\n  <div class=\"panel-heading\">\n    <h3 class=\"panel-title\" doc-editable=\"title\">Panel Title</h3>\n  </div>\n  <div class=\"panel-body\" doc-editable=\"body\">\n    Panel content\n  </div>\n</div>",
+      "label": "Panel",
+      "properties": [
+        "panel-styles"
+      ]
+    },
+    {
+      "name": "media",
+      "html": "<div class=\"embed-responsive embed-responsive-16by9\" doc-html=\"iframe\"></div>",
+      "label": "Media"
     },
     {
       "name": "h1",
@@ -172,8 +178,8 @@
     },
     {
       "name": "hero",
-      "html": "<div class=\"jumbotron\">\n  <h1 doc-editable=\"title\">Hello, world!</h1>\n  <p doc-editable=\"text\">\n    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.\n  </p>\n  <p>\n    <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\" doc-editable=\"button\">Learn more</a>\n  </p>\n</div>",
-      "label": "Large Image"
+      "html": "<div class=\"jumbotron\">\n  <h1 doc-editable=\"title\">Hello, world!</h1>\n  <p doc-editable=\"text\">\n    This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.\n  </p>\n  <p>\n    <a doc-link=\"featured-page\" doc-editable=\"button\" class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Learn more</a>\n  </p>\n</div>",
+      "label": "Hero Teaser"
     },
     {
       "name": "image",
@@ -181,17 +187,9 @@
       "label": "Image"
     },
     {
-      "name": "list-group",
-      "html": "<ul class=\"list-group\" doc-container=\"list\"></ul>",
-      "label": "List Group",
-      "directives": {
-        "list": {
-          "allowedChildren": [
-            "list-group-item",
-            "list-group-box-item"
-          ]
-        }
-      }
+      "name": "teaser",
+      "html": "<div class=\"thumbnail\">\n  <a doc-link=\"link\" href=\"#\">\n    <img doc-image=\"image\">\n    <div class=\"caption\">\n      <h3 doc-editable=\"label\">Label</h3>\n      <p doc-editable=\"description\">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>\n    </div>\n  </a>\n</div>",
+      "label": "Teaser"
     },
     {
       "name": "list-group-box-item",
@@ -208,6 +206,19 @@
       "allowedParents": [
         "list-group"
       ]
+    },
+    {
+      "name": "list-group",
+      "html": "<ul class=\"list-group\" doc-container=\"list\"></ul>",
+      "label": "List Group",
+      "directives": {
+        "list": {
+          "allowedChildren": [
+            "list-group-item",
+            "list-group-box-item"
+          ]
+        }
+      }
     },
     {
       "name": "p",
